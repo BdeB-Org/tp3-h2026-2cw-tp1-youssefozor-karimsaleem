@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mes Réservations - Hôtel Lux</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Tahoma, Arial, sans-serif;
+
+    background-color:#000000;
+
+    color:white;
+}
+
+.haut-page{
+
+    width:900px;
+
+    margin:20px auto 0 auto;
+}
+
+.logo{
+
+    text-align:center;
+
+    color:#ff2b2b;
+
+    font-size:100px;
+
+    font-family:"Brush Script MT", cursive;
+
+    font-weight:bold;
+
+    margin-bottom:12px;
+}
+
+.barre-navigation{
+
+    background:#2f2f2f;
+
+    border:1px solid #000000;
+
+    height:40px;
+}
+
+.barre-navigation ul{
+
+    list-style:none;
+
+    display:flex;
+}
+
+.barre-navigation li{
+
+    padding:10px 16px;
+
+    border-right:1px solid #555;
+
+    font-weight:bold;
+
+    font-size:15px;
+}
+
+.barre-navigation li:hover{
+
+    background:#3b3b3b;
+}
+
+.barre-navigation a{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+.description{
+
+    width:900px;
+
+    margin:auto;
+
+    background:#d7d7d7;
+
+    color:#333;
+
+    padding:12px;
+
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+    border-bottom:1px solid #000;
+
+    font-size:16px;
+
+    line-height:1.5;
+}
+
+.cadre-exterieur{
+
+    width:980px;
+
+    margin:15px auto;
+
+    border:2px solid #7a0000;
+
+    padding:18px;
+
+    background-color:#0f0f0f;
+
+    background-image:
+    radial-gradient(
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px
+    );
+
+    background-size:18px 18px;
+}
+
+.conteneur{
+
+    width:900px;
+
+    margin:18px auto;
+}
+
+.boite{
+
+    background:#dcdcdc;
+
+    border:1px solid #111;
+}
+
+.entete-boite{
+
+    background:#303030;
+
+    color:white;
+
+    padding:12px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    border-bottom:1px solid #111;
+}
+
+.contenu{
+
+    padding:20px;
+
+    color:black;
+}
+
+.zone-reservation{
+
+    background: white;
+
+    border:3px solid #a020f0;
+
+    padding:25px;
+
+    color:white;
+}
+
+.titre-haut{
+
+    color:#c05cff;
+
+    font-size:42px;
+
+    font-family:"Brush Script MT", cursive;
+
+    margin-bottom:8px;
+}
+
+.ligne-point{
+
+    border-bottom:3px dotted #c05cff;
+
+    margin-bottom:18px;
+}
+
+.titre-centre{
+
+    text-align:center;
+
+    color:#c05cff;
+
+    font-size:38px;
+
+    font-family:"Brush Script MT", cursive;
+
+    margin-bottom:18px;
+}
+
+.reservation-id{
+
+    color:#e6b3ff;
+
+    font-size:34px;
+
+    font-family:"Comic Sans MS", cursive;
+
+    margin-bottom:20px;
+}
+
+.numero{
+
+    color:#ffffff;
+
+    font-weight:bold;
+}
+
+.chambre{
+
+    color:#e0e0e0;
+
+    font-size:30px;
+
+    font-family:"Comic Sans MS", cursive;
+
+    margin-bottom:25px;
+}
+
+.dates{
+
+    color:#ff66cc;
+
+    font-size:32px;
+
+    font-family:"Comic Sans MS", cursive;
+
+    margin-bottom:30px;
+}
+
+.zone-bouton{
+
+    text-align:right;
+}
+
+.bouton-annuler{
+
+    background:none;
+
+    border:4px solid #ff0055;
+
+    color:#ff0055;
+
+    padding:4px 18px;
+
+    font-size:36px;
+
+    font-family:"Brush Script MT", cursive;
+
+    cursor:pointer;
+}
+
+.bouton-annuler:hover{
+
+    background:#ff0055;
+
+    color:white;
+}
+
+.bas-page{
+
+    height:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="haut-page">
+
+<div class="logo">
+        Hôtel Lux <br>
+
+        <span style="color:white; font-size:40px;">
+            Hôtel de prestige depuis 1970
+        </span>
+
+        <br>
+
+        ❀
+
+    </div>
+
+    <div class="barre-navigation">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Accueil
+                </a>
+            </li>
+
+            <li>
+                <a href="salles.html">
+                    Chambres
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="description">
+
+    Consultez vos réservations actuelles et gérez vos séjours à l’Hôtel Lux.
+
+</div>
+
+<div class="cadre-exterieur">
+
+<div class="conteneur">
+
+    <div class="boite">
+
+        <div class="entete-boite">
+            Mes réservations
+        </div>
+
+        <div class="contenu">
+
+            <div class="zone-reservation">
+
+                <div class="titre-haut">
+
+                    Mes réservations
+
+                </div>
+
+                <div class="ligne-point"></div>
+
+                <div class="titre-centre">
+
+                    Mes réservations
+
+                </div>
+
+                <div class="ligne-point"></div>
+
+                <div class="reservation-id">
+
+                    Réservation
+                    <span class="numero">
+
+                        #1
+
+                    </span>
+
+                </div>
+
+                <div class="chambre">
+
+                    Chambre 101
+
+                </div>
+
+                <div class="dates">
+
+                    10 avril
+                    →
+                    12 avril
+
+                </div>
+
+                <div class="zone-bouton">
+
+                    <button class="bouton-annuler">
+
+                        Annuler
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="bas-page"></div>
+
+</body>
+
+</html>
