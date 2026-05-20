@@ -1,377 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-<link rel="stylesheet" href="css/style.css" id="">
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Accueil - Hôtel Lux</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    font-family:Tahoma, Arial, sans-serif;
-
-    background-color:#000000;
-
-    color:white;
-}
-
-.haut-page{
-
-    width:900px;
-
-    margin:20px auto 0 auto;
-}
-
-.logo{
-
-    text-align:center;
-
-    color:#ff2b2b;
-
-    font-size:100px;
-
-    font-family:"Brush Script MT", cursive;
-
-    font-weight:bold;
-
-    margin-bottom:12px;
-
-    letter-spacing:2px;
-}
-
-.barre-navigation{
-
-    background:#2f2f2f;
-
-    border:1px solid #000000;
-
-    height:40px;
-}
-
-.barre-navigation ul{
-
-    list-style:none;
-
-    display:flex;
-}
-
-.barre-navigation li{
-
-    padding:10px 16px;
-
-    border-right:1px solid #555;
-
-    font-weight:bold;
-
-    font-size:15px;
-
-    cursor:pointer;
-
-    transition:0.15s;
-}
-
-.barre-navigation li:hover{
-
-    background:#3b3b3b;
-}
-
-.barre-navigation a{
-
-    color:white;
-
-    text-decoration:none;
-}
-
-.description{
-
-    width:900px;
-
-    margin:auto;
-
-    background:#d7d7d7;
-
-    color:#333;
-
-    padding:12px;
-
-    border-left:1px solid #000;
-    border-right:1px solid #000;
-    border-bottom:1px solid #000;
-
-    font-size:16px;
-
-    line-height:1.5;
-}
-
-.cadre-exterieur{
-
-    height:100%;
-
-    width:980px;
-
-    margin:15px auto;
-
-    border:2px solid #7a0000;
-
-    padding:18px;
-
-    background-color:#0f0f0f;
-
-    background-image:
-    radial-gradient(
-    rgba(255,255,255,0.05) 1px,
-    transparent 1px
-    );
-
-    background-size:18px 18px;
-}
-
-.conteneur{
-
-    width:900px;
-
-    margin:18px auto;
-}
-
-.boite{
-
-    background:#dcdcdc;
-
-    border:1px solid #111;
-}
-
-.entete-boite{
-
-    background:#303030;
-
-    color:white;
-
-    padding:12px;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    border-bottom:1px solid #111;
-}
-
-.contenu{
-
-    padding:30px;
-
-    color:black;
-
-    text-align:center;
-}
-
-.carte-accueil{
-
-    background:#efefef;
-
-    border:1px solid #999;
-
-    padding:35px;
-
-    margin-bottom:20px;
-}
-
-.titre-bienvenue{
-
-    font-size:42px;
-
-    margin-bottom:15px;
-
-    color:#8b0000;
-}
-
-.texte-bienvenue{
-
-    font-size:20px;
-
-    line-height:1.7;
-
-    margin-bottom:25px;
-}
-
-.boutons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-}
-
-.bouton-navigation{
-
-    background:#18b818;
-
-    border:2px solid #006600;
-
-    color:white;
-
-    padding:14px 26px;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    text-decoration:none;
-
-    transition:0.15s;
-}
-
-.bouton-navigation:hover{
-
-    filter:brightness(1.08);
-}
-
-.image-hotel{
-
-    margin-top:20px;
-
-    border:3px solid #8a8a8a;
-
-    padding:8px;
-
-    background:white;
-}
-
-.image-hotel img{
-
-    width:100%;
-
-    max-width:700px;
-
-    display:block;
-
-    margin:auto;
-}
-
-.bas-page{
-
-    height:30px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Hôtel Lux</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
+<body id="index-page">
 
 <div class="haut-page">
-
     <div class="logo">
         Hôtel Lux <br>
-
         <span style="color:white; font-size:40px;">
             Hôtel de prestige depuis 1970
         </span>
-
         <br>
-
         ❀
-
     </div>
-
+    
     <div class="barre-navigation">
-
         <ul>
-
-            <li>
-                <a href="index.html">
-                    Accueil
-                </a>
-            </li>
-
-            <li>
-                <a href="salles.html">
-                    Chambres
-                </a>
-            </li>
-
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="salles.html">Chambres</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="reservations.html">Réservations</a></li>
         </ul>
-
     </div>
-
 </div>
 
 <div class="description">
-
-    Bienvenue à l’Hôtel Lux. Découvrez nos chambres élégantes et profitez d’un séjour confortable dans un environnement chaleureux et prestigieux.
-
+    Bienvenue à l’Hôtel Lux. Accédez aux outils de gestion pour la base de données de l'établissement.
 </div>
 
 <div class="cadre-exterieur">
-
-<div class="conteneur">
-
-    <div class="boite">
-
-        <div class="entete-boite">
-            Accueil
-        </div>
-
-        <div class="contenu">
-
-            <div class="carte-accueil">
-
-                <div class="titre-bienvenue">
-                    Bienvenue à l’Hôtel Lux
-                </div>
-
-                <div class="texte-bienvenue">
-
-                    Notre hôtel vous offre des chambres confortables, un service de qualité ainsi qu’une expérience unique depuis plus de 50 ans.
-
-                </div>
-
-                <div class="boutons">
-
-                    <a
-                    href="salles.html"
-                    class="bouton-navigation">
-
-                        Voir les chambres
-
-                    </a>
-
-                </div>
-
-                <div class="image-hotel">
-
-                    <img
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400&auto=format&fit=crop"
-                    alt="Hôtel">
-
-                </div>
-
+    <div class="conteneur">
+        <div class="boite">
+            <div class="entete-boite">
+                Accueil - Panneau d'administration
             </div>
-
+            <div class="contenu">
+                <div class="carte-accueil">
+                    <div class="titre-bienvenue">
+                        Système de gestion de l’Hôtel Lux
+                    </div>
+                    <div class="texte-bienvenue">
+                        Sélectionnez un module ci-dessous pour modifier les registres de la base de données Oracle.
+                    </div>
+                    
+                    <div class="boutons" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <a href="salles.html" class="bouton-navigation">
+                            Gérer les chambres
+                        </a>
+                        <a href="clients.html" class="bouton-navigation" style="background: #303030; border: 1px solid #555;">
+                            Gérer les clients
+                        </a>
+                        <a href="reservations.html" class="bouton-navigation" style="background: #ffe600; color: black; border: 1px solid #b3a100; font-weight: bold;">
+                            Gérer les réservations
+                        </a>
+                    </div>
+                    
+                    <div class="image-hotel" style="margin-top: 25px;">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400&auto=format&fit=crop" alt="Hôtel">
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
 </div>
-
-</div>
-
 <div class="bas-page"></div>
-
 </body>
-
 </html>

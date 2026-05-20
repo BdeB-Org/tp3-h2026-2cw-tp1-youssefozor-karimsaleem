@@ -17,68 +17,82 @@
             <br>
             ❀
         </div>
-
         <div class="barre-navigation">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="salles.html">Chambres</a></li>
-                <li><a href="clients.html">Mes Réservations</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="reservations.html">Réservations</a></li>
             </ul>
         </div>
     </div>
 
     <div class="description">
-        Veuillez compléter votre réservation en sélectionnant les dates désirées.
+        Gestion des réservations. Associez un client à une chambre pour des dates spécifiques.
     </div>
 
     <div class="cadre-exterieur">
         <div class="conteneur">
-            <div class="boite">
-                <div class="entete-boite">
-                    Réservation de chambre
-                </div>
-                <div class="contenu">
-                    <div class="zone-reservation">
-                        <div class="titre-reservation">
-                            Réservation
+            <div id="reservation-message" class="message"></div>
+
+            <div class="boite" style="margin-bottom: 25px;">
+                <div class="entete-boite">Créer une réservation</div>
+                <div class="contenu" style="background: #efefef;">
+                    <form id="reservation-form" style="display: flex; flex-direction: column; gap: 15px;">
+                      
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="font-weight: bold; color: #111;">ID du Client :</label>
+                            <input type="number" id="res_client_id" required style="width: 250px; padding: 6px;">
                         </div>
-                        <div class="ligne-point"></div>
-                        <div class="sous-titre">
-                            Réservations
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="font-weight: bold; color: #111;">ID de la Chambre :</label>
+                            <input type="number" id="res_salle_id" required style="width: 250px; padding: 6px;">
                         </div>
-                        <div class="ligne-point"></div>
-                        <div class="information">
-                            Chambre :
-                            <span class="numero">101</span>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="font-weight: bold; color: #00c853;">Date de début :</label>
+                            <input type="date" id="start_date" required style="width: 250px; padding: 6px;">
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label style="font-weight: bold; color: #ff2b2b;">Date de fin :</label>
+                            <input type="date" id="end_date" required style="width: 250px; padding: 6px;">
                         </div>
                         
-                        <form id="reservation-form">
-                            <div class="champ">
-                                <label class="date-debut">Date début</label>
-                                <input type="date" id="start_date">
-                            </div>
-                            <div class="champ">
-                                <label class="date-fin">Date fin</label>
-                                <input type="date" id="end_date">
-                            </div>
-                            <input type="hidden" id="id_reservation">
-                            <input type="hidden" id="client_id">
-                            <input type="hidden" id="salle_id">
-                            
-                            <div class="zone-bouton">
-                                <button type="submit" class="bouton-confirmation">Confirmer</button>
-                            </div>
-                        </form>
-                        
-                        <table style="display:none;">
-                            <tbody id="reservations-body">
-                            </tbody>
-                        </table>
-                    </div>
+                        <div style="text-align: right; margin-top: 5px;">
+                            <button type="submit" style="background: #ffe600; border: 2px solid #b3a100; color: black; padding: 8px 20px; font-weight: bold; font-family: 'Brush Script MT', cursive; font-size: 24px; cursor: pointer;">
+                                Confirmer
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
+
+            <div class="boite">
+                <div class="entete-boite">Liste des réservations actives</div>
+                <div class="contenu" style="background: white; padding: 10px;">
+                    <table style="width: 100%; border-collapse: collapse; color: black;">
+                        <thead>
+                            <tr style="background: #303030; color: white; text-align: left;">
+                                <th style="padding: 10px; border: 1px solid #ddd;">ID Réservation</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">Client</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">Chambre</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">Début</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">Fin</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservations-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
+
     <div class="bas-page"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/reservations.js"></script>
 </body>
 </html>

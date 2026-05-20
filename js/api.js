@@ -2,6 +2,30 @@
 // Exemple : http://localhost:8080/ords/commande
 const BASE_URL = 'http://localhost:8080/ords/commande';
 
+function escapeHtml(unsafe) {
+  if (unsafe === null || unsafe === undefined) return '';
+  return String(unsafe)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+}
+
+function setMessage(elementId, message, type) {
+  const messageDiv = document.getElementById(elementId);
+  if (!messageDiv) return;
+  
+  messageDiv.textContent = message;
+  messageDiv.className = 'message'; 
+  if (type) messageDiv.classList.add(type);
+  
+  messageDiv.style.display = 'block';
+  setTimeout(() => { messageDiv.style.display = 'none'; }, 4000);
+}
+
+
+
 async function handleResponse(response) {
   if (!response.ok) {
     const text = await response.text();
