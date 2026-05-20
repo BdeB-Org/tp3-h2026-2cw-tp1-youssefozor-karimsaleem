@@ -1,480 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Réservations - Hôtel Lux</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    font-family:Tahoma, Arial, sans-serif;
-
-    background-color:#000000;
-
-    color:white;
-}
-
-.haut-page{
-
-    width:900px;
-
-    margin:20px auto 0 auto;
-}
-
-.logo{
-
-    text-align:center;
-
-    color:#ff2b2b;
-
-    font-size:100px;
-
-    font-family:"Brush Script MT", cursive;
-
-    font-weight:bold;
-
-    margin-bottom:12px;
-}
-
-.barre-navigation{
-
-    background:#2f2f2f;
-
-    border:1px solid #000000;
-
-    height:40px;
-}
-
-.barre-navigation ul{
-
-    list-style:none;
-
-    display:flex;
-}
-
-.barre-navigation li{
-
-    padding:10px 16px;
-
-    border-right:1px solid #555;
-
-    font-weight:bold;
-
-    font-size:15px;
-}
-
-.barre-navigation li:hover{
-
-    background:#3b3b3b;
-}
-
-.barre-navigation a{
-
-    color:white;
-
-    text-decoration:none;
-}
-
-.description{
-
-    width:900px;
-
-    margin:auto;
-
-    background:#d7d7d7;
-
-    color:#333;
-
-    padding:12px;
-
-    border-left:1px solid #000;
-    border-right:1px solid #000;
-    border-bottom:1px solid #000;
-
-    font-size:16px;
-
-    line-height:1.5;
-}
-
-.cadre-exterieur{
-
-    width:980px;
-
-    margin:15px auto;
-
-    border:2px solid #7a0000;
-
-    padding:18px;
-
-    background-color:#0f0f0f;
-
-    background-image:
-    radial-gradient(
-    rgba(255,255,255,0.05) 1px,
-    transparent 1px
-    );
-
-    background-size:18px 18px;
-}
-
-.conteneur{
-
-    width:900px;
-
-    margin:18px auto;
-}
-
-.boite{
-
-    background:#dcdcdc;
-
-    border:1px solid #111;
-}
-
-.entete-boite{
-
-    background:#303030;
-
-    color:white;
-
-    padding:12px;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    border-bottom:1px solid #111;
-}
-
-.contenu{
-
-    padding:20px;
-
-    color:black;
-}
-
-.zone-reservation{
-
-    background:#efefef;
-
-    border:1px solid #999;
-
-    padding:25px;
-}
-
-.titre-reservation{
-
-    color:#00aaff;
-
-    font-size:42px;
-
-    font-family:"Brush Script MT", cursive;
-
-    margin-bottom:8px;
-}
-
-.ligne-point{
-
-    border-bottom:3px dotted #8bc5ff;
-
-    margin-bottom:18px;
-}
-
-.sous-titre{
-
-    text-align:center;
-
-    color:#8bc5ff;
-
-    font-size:40px;
-
-    font-family:"Brush Script MT", cursive;
-
-    margin-bottom:18px;
-}
-
-.information{
-
-    color:#333;
-
-    font-size:30px;
-
-    font-family:"Comic Sans MS", cursive;
-
-    margin-bottom:30px;
-}
-
-.numero{
-
-    color:#7dc8ff;
-
-    font-weight:bold;
-}
-
-form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:22px;
-}
-
-.champ{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
-.champ label{
-
-    font-size:26px;
-
-    font-family:"Comic Sans MS", cursive;
-
-    font-weight:bold;
-}
-
-.date-debut{
-
-    color:#00c853;
-}
-
-.date-fin{
-
-    color:#ff2b2b;
-}
-
-.champ input{
-
-    width:200px;
-
-    padding:10px;
-
-    border:2px solid #666;
-
-    background:white;
-
-    font-size:16px;
-}
-
-.zone-bouton{
-
-    text-align:right;
-
-    margin-top:5px;
-}
-
-.bouton-confirmation{
-
-    background:none;
-
-    border:4px solid #ffe600;
-
-    color:#ffe600;
-
-    padding:4px 18px;
-
-    font-size:38px;
-
-    font-family:"Brush Script MT", cursive;
-
-    cursor:pointer;
-}
-
-.bouton-confirmation:hover{
-
-    background:#ffe600;
-
-    color:black;
-}
-
-.bas-page{
-
-    height:30px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservations - Hôtel Lux</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body id="reservation-page">
 
-<body>
-
-<div class="haut-page">
-
-<div class="logo">
-        Hôtel Lux <br>
-
-        <span style="color:white; font-size:40px;">
-            Hôtel de prestige depuis 1970
-        </span>
-
-        <br>
-
-        ❀
-
-    </div>
-
-    <div class="barre-navigation">
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    Accueil
-                </a>
-            </li>
-
-            <li>
-                <a href="salles.html">
-                    Chambres
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-</div>
-
-<div class="description">
-
-    Veuillez compléter votre réservation en sélectionnant les dates désirées.
-
-</div>
-
-<div class="cadre-exterieur">
-
-<div class="conteneur">
-
-    <div class="boite">
-
-        <div class="entete-boite">
-            Réservation de chambre
+    <div class="haut-page">
+        <div class="logo">
+            Hôtel Lux <br>
+            <span style="color:white; font-size:40px;">
+                Hôtel de prestige depuis 1970
+            </span>
+            <br>
+            ❀
         </div>
 
-        <div class="contenu">
+        <div class="barre-navigation">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="salles.html">Chambres</a></li>
+                <li><a href="clients.html">Mes Réservations</a></li>
+            </ul>
+        </div>
+    </div>
 
-            <div class="zone-reservation">
+    <div class="description">
+        Veuillez compléter votre réservation en sélectionnant les dates désirées.
+    </div>
 
-                <div class="titre-reservation">
-
-                    Réservation
-
+    <div class="cadre-exterieur">
+        <div class="conteneur">
+            <div class="boite">
+                <div class="entete-boite">
+                    Réservation de chambre
                 </div>
-
-                <div class="ligne-point"></div>
-
-                <div class="sous-titre">
-
-                    Réservations
-
+                <div class="contenu">
+                    <div class="zone-reservation">
+                        <div class="titre-reservation">
+                            Réservation
+                        </div>
+                        <div class="ligne-point"></div>
+                        <div class="sous-titre">
+                            Réservations
+                        </div>
+                        <div class="ligne-point"></div>
+                        <div class="information">
+                            Chambre :
+                            <span class="numero">101</span>
+                        </div>
+                        
+                        <form id="reservation-form">
+                            <div class="champ">
+                                <label class="date-debut">Date début</label>
+                                <input type="date" id="start_date">
+                            </div>
+                            <div class="champ">
+                                <label class="date-fin">Date fin</label>
+                                <input type="date" id="end_date">
+                            </div>
+                            <input type="hidden" id="id_reservation">
+                            <input type="hidden" id="client_id">
+                            <input type="hidden" id="salle_id">
+                            
+                            <div class="zone-bouton">
+                                <button type="submit" class="bouton-confirmation">Confirmer</button>
+                            </div>
+                        </form>
+                        
+                        <table style="display:none;">
+                            <tbody id="reservations-body">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-
-                <div class="ligne-point"></div>
-
-                <div class="information">
-
-                    Chambre :
-                    <span class="numero">
-
-                        101
-
-                    </span>
-
-                </div>
-
-                <form id="reservation-form">
-
-                    <div class="champ">
-
-                        <label class="date-debut">
-
-                            Date début
-
-                        </label>
-
-                        <input
-                        type="date"
-                        id="start_date">
-
-                    </div>
-
-                    <div class="champ">
-
-                        <label class="date-fin">
-
-                            Date fin
-
-                        </label>
-
-                        <input
-                        type="date"
-                        id="end_date">
-
-                    </div>
-
-                    <input
-                    type="hidden"
-                    id="id_reservation">
-
-                    <input
-                    type="hidden"
-                    id="client_id">
-
-                    <input
-                    type="hidden"
-                    id="salle_id">
-
-                    <div class="zone-bouton">
-
-                     <a
-href="clients.html"
-class="bouton-confirmation">
-
-    Confirmer
-
-</a>
-
-                    </div>
-
-                </form>
-
-                <table style="display:none;">
-
-                    <tbody id="reservations-body">
-
-                    </tbody>
-
-                </table>
-
             </div>
-
         </div>
-
     </div>
-
-</div>
-
-</div>
-
-<div class="bas-page"></div>
-
+    <div class="bas-page"></div>
 </body>
-
 </html>

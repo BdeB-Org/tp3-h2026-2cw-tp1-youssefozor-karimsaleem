@@ -1,446 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Chambres - Hôtel Lux</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    font-family:Tahoma, Arial, sans-serif;
-
-    background-color:#000000;
-
-    color:white;
-}
-
-.haut-page{
-
-    width:900px;
-
-    margin:20px auto 0 auto;
-}
-
-.logo{
-
-    text-align:center;
-
-    color:#ff2b2b;
-
-    font-size:100px;
-
-    font-family:"Brush Script MT", cursive;
-
-    font-weight:bold;
-
-    margin-bottom:12px;
-
-    letter-spacing:2px;
-}
-
-.barre-navigation{
-
-    background:#2f2f2f;
-
-    border:1px solid #000000;
-
-    height:40px;
-}
-
-.barre-navigation ul{
-
-    list-style:none;
-
-    display:flex;
-}
-
-.barre-navigation li{
-
-    padding:10px 16px;
-
-    border-right:1px solid #555;
-
-    font-weight:bold;
-
-    font-size:15px;
-
-    cursor:pointer;
-
-    transition:0.15s;
-}
-
-.barre-navigation li:hover{
-
-    background:#3b3b3b;
-}
-
-.barre-navigation a{
-
-    color:white;
-
-    text-decoration:none;
-}
-
-.description{
-
-    width:900px;
-
-    margin:auto;
-
-    background:#d7d7d7;
-
-    color:#333;
-
-    padding:12px;
-
-    border-left:1px solid #000;
-    border-right:1px solid #000;
-    border-bottom:1px solid #000;
-
-    font-size:16px;
-
-    line-height:1.5;
-}
-
-.cadre-exterieur{
-
-    height:100%;
-
-    width:980px;
-
-    margin:15px auto;
-
-    border:2px solid #7a0000;
-
-    padding:18px;
-
-    background-color:#0f0f0f;
-
-    background-image:
-    radial-gradient(
-    rgba(255,255,255,0.05) 1px,
-    transparent 1px
-    );
-
-    background-size:18px 18px;
-}
-
-.conteneur{
-
-    width:900px;
-
-    margin:18px auto;
-}
-
-.boite{
-
-    background:#dcdcdc;
-
-    border:1px solid #111;
-}
-
-.entete-boite{
-
-    background:#303030;
-
-    color:white;
-
-    padding:12px;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    border-bottom:1px solid #111;
-}
-
-.contenu{
-
-    padding:5px;
-
-    color:black;
-}
-
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-}
-
-tbody{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-}
-
-.chambre{
-
-    background:#efefef;
-
-    border:1px solid #999;
-
-    padding:18px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    color:#111;
-}
-
-.gauche-chambre{
-
-    display:flex;
-
-    align-items:center;
-}
-
-.droite-chambre{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
-}
-
-.bouton-reservation{
-
-    background:#18b818;
-
-    border:1px solid #006600;
-
-    color:white;
-
-    padding:8px 16px;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    text-decoration:none;
-}
-
-.bouton-reservation:hover{
-
-    filter:brightness(1.08);
-}
-
-.statut-libre{
-
-    color:green;
-}
-
-.statut-occupe{
-
-    background:#b30000;
-
-    color:white;
-
-    padding:6px 12px;
-
-    border:2px solid #8a8a8a;
-
-    border-radius:4px;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    font-size:18px;
-}
-
-.statut-occupe::before{
-
-    content:"✖";
-
-    color:#ff4d4d;
-
-    font-size:16px;
-
-    font-weight:bold;
-}
-
-.bas-page{
-
-    height:30px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chambres - Hôtel Lux</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body id="salle-page">
 
-<body>
-
-<div class="haut-page">
-
-    <div class="logo">
-        Hôtel Lux <br>
-
-        <span style="color:white; font-size:40px;">
-            Hôtel de prestige depuis 1970
-        </span>
-
-        <br>
-
-        ❀
-
-    </div>
-
-    <div class="barre-navigation">
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    Accueil
-                </a>
-            </li>
-
-            <li>
-                <a href="salles.html">
-                    Chambres
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-</div>
-
-<div class="description">
-
-    Bienvenue à l’Hôtel Lux. Consultez les chambres actuellement disponibles ainsi que leurs tarifs afin d’effectuer votre réservation.
-
-</div>
-
-<div class="cadre-exterieur">
-
-<div class="conteneur">
-
-    <div class="boite">
-
-        <div class="entete-boite">
-            Liste des chambres disponibles
+    <div class="haut-page">
+        <div class="logo">
+            Hôtel Lux <br>
+            <span style="color:white; font-size:40px;">
+                Hôtel de prestige depuis 1970
+            </span>
+            <br>
+            ❀
         </div>
 
-        <div class="contenu">
-
-            <table>
-
-                <tbody id="salles-body">
-
-                    <tr class="chambre">
-
-                        <td class="gauche-chambre">
-
-                            Chambre 101 — 120$ / nuit
-
-                        </td>
-
-                        <td class="droite-chambre">
-
-                            <span class="statut-libre">
-                                Disponible
-                            </span>
-
-                            <a
-                            href="reservations.html"
-                            class="bouton-reservation">
-
-                                Réserver maintenant
-
-                            </a>
-
-                        </td>
-
-                    </tr>
-
-                    <tr class="chambre">
-
-                        <td class="gauche-chambre">
-
-                            Chambre 102 — 150$ / nuit
-
-                        </td>
-
-                        <td class="droite-chambre">
-
-                            <span class="statut-occupe">
-                                Déjà réservée
-                            </span>
-
-                        </td>
-
-                    </tr>
-
-                    <tr class="chambre">
-
-                        <td class="gauche-chambre">
-
-                            Chambre 103 — 90$ / nuit
-
-                        </td>
-
-                        <td class="droite-chambre">
-
-                            <span class="statut-libre">
-                                Libre
-                            </span>
-
-                            <a
-                            href="reservations.html"
-                            class="bouton-reservation">
-
-                                Réserver maintenant
-
-                            </a>
-
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
+        <div class="barre-navigation">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="salles.html">Chambres</a></li>
+                <li><a href="clients.html">Mes Réservations</a></li>
+            </ul>
         </div>
-
     </div>
 
-</div>
+    <div class="description">
+        Bienvenue à l’Hôtel Lux.
+        Consultez les chambres actuellement disponibles ainsi que leurs tarifs afin d’effectuer votre réservation.
+    </div>
 
-</div>
-
-<div class="bas-page"></div>
-
+    <div class="cadre-exterieur">
+        <div class="conteneur">
+            <div class="boite">
+                <div class="entete-boite">
+                    Liste des chambres disponibles
+                </div>
+                <div class="contenu">
+                    <table>
+                        <tbody id="salles-body">
+                            <tr class="chambre">
+                                <td class="gauche-chambre">
+                                    Chambre 101 — 120$ / nuit
+                                </td>
+                                <td class="droite-chambre">
+                                    <span class="statut-libre">Disponible</span>
+                                    <a href="reservations.html" class="bouton-reservation">Réserver maintenant</a>
+                                </td>
+                            </tr>
+                            <tr class="chambre">
+                                <td class="gauche-chambre">
+                                    Chambre 102 — 150$ / nuit
+                                </td>
+                                <td class="droite-chambre">
+                                    <span class="statut-occupe">Déjà réservée</span>
+                                </td>
+                            </tr>
+                            <tr class="chambre">
+                                <td class="gauche-chambre">
+                                    Chambre 103 — 90$ / nuit
+                                </td>
+                                <td class="droite-chambre">
+                                    <span class="statut-libre">Libre</span>
+                                    <a href="reservations.html" class="bouton-reservation">Réserver maintenant</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bas-page"></div>
 </body>
-
 </html>
